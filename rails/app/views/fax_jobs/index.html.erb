@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fax Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fax</th>
+      <th>File name</th>
+      <th>Sender email</th>
+      <th>Sender name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fax_jobs.each do |fax_job| %>
+      <tr>
+        <td><%= fax_job.fax %></td>
+        <td><%= fax_job.file_name %></td>
+        <td><%= fax_job.sender_email %></td>
+        <td><%= fax_job.sender_name %></td>
+        <td><%= link_to 'Show', fax_job %></td>
+        <td><%= link_to 'Edit', edit_fax_job_path(fax_job) %></td>
+        <td><%= link_to 'Destroy', fax_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fax job', new_fax_job_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @fax_job.fax %>
+</p>
+
+<p>
+  <strong>File name:</strong>
+  <%= @fax_job.file_name %>
+</p>
+
+<p>
+  <strong>Sender email:</strong>
+  <%= @fax_job.sender_email %>
+</p>
+
+<p>
+  <strong>Sender name:</strong>
+  <%= @fax_job.sender_name %>
+</p>
+
+<%= link_to 'Edit', edit_fax_job_path(@fax_job) %> |
+<%= link_to 'Back', fax_jobs_path %>

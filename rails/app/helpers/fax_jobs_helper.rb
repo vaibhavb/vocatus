@@ -1,0 +1,2 @@
+module FaxJobsHelper
+end

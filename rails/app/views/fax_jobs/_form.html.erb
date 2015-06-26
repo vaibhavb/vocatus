@@ -1,0 +1,33 @@
+<%= form_for(@fax_job) do |f| %>
+  <% if @fax_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fax_job.errors.count, "error") %> prohibited this fax_job from being saved:</h2>
+
+      <ul>
+      <% @fax_job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :file_name %><br>
+    <%= f.text_field :file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :sender_email %><br>
+    <%= f.text_field :sender_email %>
+  </div>
+  <div class="field">
+    <%= f.label :sender_name %><br>
+    <%= f.text_field :sender_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
