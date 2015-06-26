@@ -1,4 +1,4 @@
-udo adduser vaibhavb
+sudo adduser vaibhavb
 visudo
 
 # Setup Rails - https://gorails.com/setup/ubuntu/14.04
@@ -38,5 +38,3 @@ passenger-install-apache2-module
 apt-get install apache2-threaded-dev
 apt-get install libapr1-dev
 apt-get install libaprutil1-dev
-
-
