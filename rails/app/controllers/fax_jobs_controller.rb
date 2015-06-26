@@ -24,10 +24,12 @@ class FaxJobsController < ApplicationController
   # POST /fax_jobs
   # POST /fax_jobs.json
   def create
+    Rails.logger.debug "Creating a FAX"
     @fax_job = FaxJob.new(fax_job_params)
 
     respond_to do |format|
       if @fax_job.save
+	@fax_job.send_email
         format.html { redirect_to @fax_job, notice: 'Fax job was successfully created.' }
         format.json { render :show, status: :created, location: @fax_job }
       else
