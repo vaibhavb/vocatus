@@ -11,6 +11,6 @@ The Ruby on Rails application
 # Dependencies
 Currently the system depends on following
 - Delayed Job Gem from Shopify
-- Fax API from PHAXIO (more to be added)
+- Fax API from Gem from PHAXIO (more to be added)
 - System software is Ubuntu, Ruby and Rails
 
