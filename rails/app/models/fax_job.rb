@@ -18,4 +18,11 @@ class FaxJob < ActiveRecord::Base
    Rails.logger.debug @account 
   end
 
+  def enqueue
+   puts "##### This method watches a directory and inserts fax_jobs ####"
+   dir = ENV['INCOMING_FAX_DIR']
+   puts "## Watching Directory #{dir} ##"
+   
+  end
+
 end
